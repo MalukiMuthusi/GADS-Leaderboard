@@ -1,5 +1,6 @@
 package codes.malukimuthusi.gadsleaderboard.network
 
+import codes.malukimuthusi.gadsleaderboard.dataModels.IqScore
 import codes.malukimuthusi.gadsleaderboard.dataModels.LearningHours
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -12,7 +13,7 @@ interface GadsLeaderboardService {
     suspend fun learningLeaders(): List<LearningHours>
 
     @GET("skilliq")
-    suspend fun iqLeaders()
+    suspend fun iqLeaders(): List<IqScore>
 }
 
 

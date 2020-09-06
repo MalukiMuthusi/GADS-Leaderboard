@@ -7,4 +7,7 @@
     <string name="hello_world">Hello World</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="iq_lead_badge">IQ Lead Badge</string>
+    <string name="ahmed_hany">Ahmed Hany</string>
+    <string name="score">300 skill IQ Score, Eqypt</string>
 </resources>

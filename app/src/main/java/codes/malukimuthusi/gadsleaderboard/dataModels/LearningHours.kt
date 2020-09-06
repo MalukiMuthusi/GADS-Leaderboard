@@ -7,3 +7,10 @@ data class LearningHours(
     val badgeUrl: String = ""
 ) {
 }
+
+data class IqScore(
+    val name: String = "",
+    val score: String = " ",
+    val country: String = "",
+    val badgeUrl: String = ""
+)

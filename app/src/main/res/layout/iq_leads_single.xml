@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="iqLead"
+            type="codes.malukimuthusi.gadsleaderboard.dataModels.IqScore" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16dp"
+            android:padding="@dimen/_16dp"
+            app:cardElevation="@dimen/_16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iq_badge"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/iq_lead_badge"
+                    android:src="@drawable/skill_iq_trimmed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/name"
+                    style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:text="@{iqLead.name}"
+                    app:layout_constraintBottom_toTopOf="@id/score"
+                    app:layout_constraintStart_toEndOf="@id/iq_badge"
+                    app:layout_constraintTop_toTopOf="@id/iq_badge"
+                    app:layout_constraintVertical_chainStyle="spread"
+                    tools:text="@string/ahmed_hany" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/score"
+                    style="@style/TextAppearance.MaterialComponents.Body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/score"
+                    app:layout_constraintBottom_toBottomOf="@id/iq_badge"
+                    app:layout_constraintStart_toStartOf="@id/name"
+                    app:layout_constraintTop_toBottomOf="@id/name"
+                    app:layout_constraintVertical_chainStyle="spread" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
+</layout>
