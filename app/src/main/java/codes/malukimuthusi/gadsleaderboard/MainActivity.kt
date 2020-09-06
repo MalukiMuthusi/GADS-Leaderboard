@@ -18,5 +18,19 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        viewPagerAdapter = ViewPagerAdapter(this)
+        binding.myPager.adapter = viewPagerAdapter
+
+        TabLayoutMediator(binding.tabLayout, binding.myPager) { tab, position ->
+            when (position) {
+                0 -> {
+                    tab.text = getString(R.string.learning_leaders)
+                }
+                else -> {
+                    tab.text = getString(R.string.skill_iq_leaders)
+                }
+            }
+        }.attach()
+
     }
 }

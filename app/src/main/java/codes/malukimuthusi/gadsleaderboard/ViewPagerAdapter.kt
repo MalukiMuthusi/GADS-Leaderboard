@@ -8,7 +8,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import codes.malukimuthusi.gadsleaderboard.iqLeads.IqLeadsFragment
 import codes.malukimuthusi.gadsleaderboard.learningLeads.LearningLeadsFragment
 
-class ViewPagerAdapter(fm: Fragment) : FragmentStateAdapter(fm) {
+class ViewPagerAdapter(fm: FragmentActivity) : FragmentStateAdapter(fm) {
     override fun getItemCount(): Int {
         return 2
     }
