@@ -17,12 +17,32 @@
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/lead_learner_badge"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:contentDescription="@string/badge_of_gads_top_learner"
                 android:src="@drawable/top_learner"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lead_learner_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:text="@string/pharis_muigai"
+                app:layout_constraintStart_toEndOf="@id/lead_learner_badge"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lead_learner_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/pharis_muigai"
+                app:layout_constraintStart_toEndOf="@id/lead_learner_badge"
+                app:layout_constraintTop_toBottomOf="@id/lead_learner_text" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

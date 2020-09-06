@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import codes.malukimuthusi.gadsleaderboard.R
 import codes.malukimuthusi.gadsleaderboard.databinding.LearningLeadsFragmentBinding
 
@@ -24,6 +26,10 @@ class LearningLeadsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = LearningLeadsFragmentBinding.inflate(inflater, container, false)
+
+//        val learningLeadsAdapter = LearningLeadsAdapter()
+//        binding.recycler.adapter = learningLeadsAdapter
+//        binding.recycler.layoutManager = LinearLayoutManager(requireContext())
         return binding.root
     }
 }
