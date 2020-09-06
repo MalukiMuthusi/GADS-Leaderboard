@@ -18,21 +18,5 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewPagerAdapter = ViewPagerAdapter(this)
-        binding.pager.adapter = viewPagerAdapter
-
-        TabLayoutMediator(binding.tabLayout, binding.pager) { tab, position ->
-            when (position) {
-                0 -> {
-                    tab.text = getString(R.string.learning_leaders)
-                    tab.icon = ContextCompat.getDrawable(this, R.drawable.top_learner)
-                }
-                1 -> {
-                    tab.text = getString(R.string.skill_iq_leaders)
-                    tab.icon = ContextCompat.getDrawable(this, R.drawable.skill_iq_trimmed)
-                }
-            }
-        }.attach()
-
     }
 }

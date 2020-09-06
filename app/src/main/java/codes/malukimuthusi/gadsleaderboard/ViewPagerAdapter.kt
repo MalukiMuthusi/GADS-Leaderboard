@@ -8,7 +8,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import codes.malukimuthusi.gadsleaderboard.iqLeads.IqLeadsFragment
 import codes.malukimuthusi.gadsleaderboard.learningLeads.LearningLeadsFragment
 
-class ViewPagerAdapter(fm: FragmentActivity) : FragmentStateAdapter(fm) {
+class ViewPagerAdapter(fm: Fragment) : FragmentStateAdapter(fm) {
     override fun getItemCount(): Int {
         return 2
     }
@@ -16,11 +16,11 @@ class ViewPagerAdapter(fm: FragmentActivity) : FragmentStateAdapter(fm) {
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> {
-                LearningLeadsFragment.newInstance()
+                LearningLeadsFragment()
 
             }
             else -> {
-                IqLeadsFragment.newInstance()
+                IqLeadsFragment()
             }
         }
     }
