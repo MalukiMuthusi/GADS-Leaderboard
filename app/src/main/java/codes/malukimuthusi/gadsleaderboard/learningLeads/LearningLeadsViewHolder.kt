@@ -4,13 +4,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.ViewParent
 import androidx.recyclerview.widget.RecyclerView
+import codes.malukimuthusi.gadsleaderboard.dataModels.LearningHours
 import codes.malukimuthusi.gadsleaderboard.databinding.SingleLearningLeadersBinding
 
 class LearningLeadsViewHolder private constructor(private val binding: SingleLearningLeadersBinding) :
     RecyclerView.ViewHolder(binding.root) {
 
-    fun bind() {
-
+    fun bind(leadData: LearningHours) {
+        binding.leadData = leadData
     }
 
     companion object {

@@ -39,12 +39,12 @@ class HomeFragment : Fragment() {
             when (position) {
                 0 -> {
                     tab.text = getString(R.string.learning_leaders)
-                    tab.icon = ContextCompat.getDrawable(requireContext(), R.drawable.top_learner)
+//                    tab.icon = ContextCompat.getDrawable(requireContext(), R.drawable.top_learner)
                 }
                 else -> {
                     tab.text = getString(R.string.skill_iq_leaders)
-                    tab.icon =
-                        ContextCompat.getDrawable(requireContext(), R.drawable.skill_iq_trimmed)
+//                    tab.icon =
+//                        ContextCompat.getDrawable(requireContext(), R.drawable.skill_iq_trimmed)
                 }
             }
         }.attach()

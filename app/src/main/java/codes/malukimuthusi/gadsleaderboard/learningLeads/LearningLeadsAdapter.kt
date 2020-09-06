@@ -11,7 +11,7 @@ class LearningLeadsAdapter : ListAdapter<LearningHours, LearningLeadsViewHolder>
     }
 
     override fun onBindViewHolder(holder: LearningLeadsViewHolder, position: Int) {
-        holder.bind()
+        holder.bind(getItem(position))
     }
 }
 

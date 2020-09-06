@@ -14,6 +14,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
 
     compileOptions {
@@ -70,16 +71,19 @@ dependencies {
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.moshi:moshi-kotlin:1.10.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
     testImplementation("junit:junit:4.13")
     androidTestImplementation("androidx.test.ext:junit:1.1.2")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
     implementation("androidx.viewpager2:viewpager2:1.0.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:${PluginVersions.LIFECYCLE}")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:${PluginVersions.LIFECYCLE}")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:${PluginVersions.LIFECYCLE}")
-    implementation("androidx.fragment:fragment-ktx:$fragment_version")
-    implementation("androidx.activity:activity-ktx:$activity_version")
-    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
-    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.2.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0")
+    implementation("androidx.fragment:fragment-ktx:1.2.5")
+    implementation("androidx.activity:activity-ktx:1.1.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.3.0")
+    implementation("androidx.navigation:navigation-ui-ktx:2.3.0")
 
 }
